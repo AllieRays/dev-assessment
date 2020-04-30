@@ -41,24 +41,24 @@ https://docs.acquia.com/dev-desktop/config/keygen/  \
 ....() save the key as dev_assessment_key \
 ....() type in `ssh-agent -s your_key_name`
 
-## Step two: Clone your repo with SSH
+## Step four: Clone your repo with SSH
 `git clone git@github.com:[your-github-handle]/dev-assessment.git`
 
-## Step three: Composer
+## Step five: Composer
 Run Composer to install dependencies  \
 `composer install`
 or 
 `php -d memory_limit=-1 /usr/local/bin/composer install`
 
 
-## Step five: Add mysql to your path
+## Step six: Add mysql to your path
 nano ~/.bash_profile and add the following lines.
 ```
 export PATH="/Applications/DevDesktop/mysql/bin:$PATH" 
 export DEVDESKTOP_DRUPAL_SETTINGS_DIR="$HOME/.acquia/DevDesktop/DrupalSettings"
 ```
 
-## Step Six: Set up Acquia dev desktop
+## Step seven: Set up Acquia dev desktop
 Select with an existing Drupal site located on my computer\
 Fill the following fields  \
 () Local codebase folder: `[your-path]/dev-assessment`   \
