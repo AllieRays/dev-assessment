@@ -90,36 +90,34 @@ Installation
 To install the required applications for Acquia BLT (including PHP, Node.js, Git, and Composer), run the following commands:
 
 Run the following command, and press Enter when prompted:
+`sudo add-apt-repository ppa:ondrej/php`
 
-sudo add-apt-repository ppa:ondrej/php
 Run the following command:
+`sudo apt-get update`
 
-sudo apt-get update
 Run the following command, based on your installed version of Acquia BLT:
+`sudo apt-get install -y php7.2-cli php7.2-curl php7.2-xml php7.2-mbstring php7.2-bz2 php7.2-gd php7.2-mysql mysql-client unzip git`
 
-
-
-sudo apt-get install -y php7.2-cli php7.2-curl php7.2-xml php7.2-mbstring php7.2-bz2 php7.2-gd php7.2-mysql mysql-client unzip git
-Run the following command:
-
+Run the following command:\
 `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`
-Run the following command:
+
+Run the following command:\
 `php composer-setup.php`
 
-Run the following command:
+Run the following command:\
 `sudo mv composer.phar /usr/local/bin/composer`
 
-Run the following command:
+Run the following command:\
 `curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -`
 
-Run the following command:
+Run the following command:\
 `sudo apt-get install -y nodejs`
 
-Configuring Git
+() Configuring Git \
 
-Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:
-`git config --global user.email "you@example.com"`
-`git config --global user.name "Your Name"` 
+Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:\
+`git config --global user.email "you@example.com"`\
+`git config --global user.name "Your Name"` \
 If you haven’t already configured an SSH identity (useful for working with projects on GitHub and interacting with your websites on Acquia Cloud), you should generate an SSH key.
 
 
