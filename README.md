@@ -79,3 +79,13 @@ BLT uses a number of configuration (`.yml` or `.json`) files to define and custo
 * GitHub - https://github.com/#GITHUB_ORG/#GITHUB_PROJECT
 * Acquia Cloud subscription - #ACQUIA_CLOUD_URL
 * TravisCI - #TRAVIS_URL
+
+
+
+
+
+
+Access Checklist 
+() github repo 
+() Acquia Cloud 
+() ACSF 
