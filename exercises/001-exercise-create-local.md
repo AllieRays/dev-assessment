@@ -52,3 +52,4 @@ Fill the following fields
 
 Fork and clone the repository 
 
+https://blt.readthedocs.io/en/8.x/readme/local-development/#using-acquia-dev-desktop-for-blt-generated-projects

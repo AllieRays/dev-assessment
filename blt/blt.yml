@@ -26,6 +26,7 @@ git:
   remotes: {  }
   hooks:
     commit-msg: false
+    pre-push: false
 deploy:
   # When manually deploying a tag, also tag the source repository.
   tag_source: true
