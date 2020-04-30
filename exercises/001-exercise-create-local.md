@@ -24,6 +24,8 @@ Fork the repo the repository to a sites directory on your local machine.
 Clone your repo 
 `git clone git@github.com:[your-github-handle]/developer-assessment-exercies.git`
 
+`blt setup`
+
 
 ## Step two: Download Dev Desktop
 Obtain a free version of the [Acquia Dev Desktop](https://dev.acquia.com/downloads) program.
