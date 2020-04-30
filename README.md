@@ -86,6 +86,10 @@ BLT uses a number of configuration (`.yml` or `.json`) files to define and custo
 
 
 Access Checklist 
-() github repo 
+() github repo  
 () Acquia Cloud 
 () ACSF 
+() git
+() composer
+() php 
+
