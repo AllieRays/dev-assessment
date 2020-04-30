@@ -121,7 +121,6 @@ nbproject/*
 
 #Exports
 *.gz
-*.sql
 *.zip
 
 # PHPStorm
