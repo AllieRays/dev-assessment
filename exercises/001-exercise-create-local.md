@@ -61,13 +61,76 @@ export DEVDESKTOP_DRUPAL_SETTINGS_DIR="$HOME/.acquia/DevDesktop/DrupalSettings"
 ## Step seven: Set up Acquia dev desktop
 Select with an existing Drupal site located on my computer\
 Fill the following fields  \
-() Local codebase folder: `[your-path]/dev-assessment`   \
-() Local sitename: dev-desktop   \
+() Local codebase folder: `[your-path]/dev-assessment/docroot`   \
+() Local sitename: dev-assessment   \
 () Use PHP: 7.3.9   \
-() Database: Start with an sql dump file  \
-() Dump File: dev-assessment04302020.sql \
+() Database: Start with an sql dump file. Dump File: dev-assessment04302020.sql \
 () New Database name: dev_assessment 
 
+
+## Step eight: Set up BLT 
+Acquia BLT on Windows has the following requirements:
+
+Running a 64-bit version of Windows 10 Anniversary update (build 14393 or greater).
+
+Access to a local account with administrative rights for Acquia BLT’s initial installation.
+
+Windows Subsystem for Linux (installation instructions)
+
+Note
+
+You must create a UNIX username with a password when prompted at the end of the installation process. Certain Acquia BLT commands will not function if you install the Windows Subsystem for Linux using an account without a password.
+
+If you cannot use WSL, you can instead set up virtualization, and then run Acquia BLT in a virtual machine (VM) or container running Windows, based on the following tools:
+
+Docksal: Supports VirtualBox and Docker
+Lando: Supports Docker
+Installation
+
+To install the required applications for Acquia BLT (including PHP, Node.js, Git, and Composer), run the following commands:
+
+Run the following command, and press Enter when prompted:
+
+sudo add-apt-repository ppa:ondrej/php
+Run the following command:
+
+sudo apt-get update
+Run the following command, based on your installed version of Acquia BLT:
+
+
+
+sudo apt-get install -y php7.2-cli php7.2-curl php7.2-xml php7.2-mbstring php7.2-bz2 php7.2-gd php7.2-mysql mysql-client unzip git
+Run the following command:
+
+`php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`
+Run the following command:
+`php composer-setup.php`
+
+Run the following command:
+`sudo mv composer.phar /usr/local/bin/composer`
+
+Run the following command:
+`curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -`
+
+Run the following command:
+`sudo apt-get install -y nodejs`
+
+Configuring Git
+
+Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:
+`git config --global user.email "you@example.com"`
+`git config --global user.name "Your Name"` 
+If you haven’t already configured an SSH identity (useful for working with projects on GitHub and interacting with your websites on Acquia Cloud), you should generate an SSH key.
+
+
+## Step nine: BLT setup 
+() cd /sites/dev-assessment
+() run `blt setup`\ 
+() y
+() y
+
+## step ten: drush into the site
+Once you are done go back to the dev desktop. 
 
 
 
