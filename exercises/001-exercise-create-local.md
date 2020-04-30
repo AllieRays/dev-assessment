@@ -16,7 +16,7 @@ Check if you have the following system requirements:
 If not download the latest version of [composer](https://getcomposer.org/doc/00-intro.md#installation-windows).
 () PHP 7.3 - https://www.foxinfotech.in/2019/01/how-to-install-php-7-3-on-windows-10.html
 () BLT https://docs.acquia.com/blt/install/
-
+() After any new installs please restart your terminal.
 
 ## Step one: Fork the repo 
 Go to https://github.com/AllieRays/dev-assessment and fork the repository to a sites directory on your local machine. 
