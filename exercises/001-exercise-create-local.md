@@ -47,6 +47,8 @@ https://docs.acquia.com/dev-desktop/config/keygen/  \
 ## Step three: Composer
 Run Composer to install dependencies  \
 `composer install`
+or 
+`php -d memory_limit=-1 /usr/local/bin/composer install`
 
 
 ## Step five: Add mysql to your path
@@ -65,3 +67,9 @@ Fill the following fields  \
 () Database: Start with an sql dump file  \
 () Dump File: dev-assessment04302020.sql \
 () New Database name: dev_assessment 
+
+
+
+
+### Troubleshooting 
+SSH KEY public-key permission denied 
