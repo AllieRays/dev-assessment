@@ -8,11 +8,13 @@ Acquia Dev Desktop is an xAMP stack (or DAMP stack) installer, providing a full 
 
 Also, because of its integration with Acquia Cloud, Acquia Dev Desktop provides the easiest method to publish, develop, and synchronize your local Drupal websites onto the web.
 
-Check if you have the following system requirements:
+Check if you have the following system requirements: \
 () open your terminal.\
-() git `git`\
+() git \
+`git`\
 If you do not have git download here: https://git-scm.com/download/win\
-() composer `composer -V`\
+() composer \
+`composer -V`\
 If not download the latest version of [composer](https://getcomposer.org/doc/00-intro.md#installation-windows).\
 () PHP 7.3 - \
 If you do not have php download from here: https://www.foxinfotech.in/2019/01/how-to-install-php-7-3-on-windows-10.html \
