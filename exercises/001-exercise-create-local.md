@@ -14,9 +14,10 @@ Check if you have the following system requirements: \
 `git`\
 If you do not have git download here: https://git-scm.com/download/win\
 () composer \
-`composer -V`\
+`composer -V` \
 If not download the latest version of [composer](https://getcomposer.org/doc/00-intro.md#installation-windows).\
 () PHP 7.3 - \
+`php -V`\
 If you do not have php download from here: https://www.foxinfotech.in/2019/01/how-to-install-php-7-3-on-windows-10.html \
 () BLT https://docs.acquia.com/blt/install/ \
 () After any new installs please restart your terminal.
