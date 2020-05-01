@@ -68,7 +68,7 @@ Fill the following fields  \
 () New Database name: dev_assessment 
 
 
-## Step five: Set up BLT 
+## Step eight: Set up BLT 
 Acquia BLT on Windows has the following requirements:
 
 Running a 64-bit version of Windows 10 Anniversary update (build 14393 or greater).
