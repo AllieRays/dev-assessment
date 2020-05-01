@@ -38,7 +38,7 @@ Go to https://github.com/AllieRays/dev-assessment and fork the repository to a s
 ## Step two: Download Dev Desktop
 Obtain a free version of the [Acquia Dev Desktop](https://dev.acquia.com/downloads) program.
 
-## Step three: Downloand Windows Subsystem for Linux
+## Step three: Downloand [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)
 Acquia BLT on Windows has the following requirements:
 
 Running a 64-bit version of Windows 10 Anniversary update (build 14393 or greater).
