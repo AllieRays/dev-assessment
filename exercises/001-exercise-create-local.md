@@ -68,7 +68,7 @@ Fill the following fields  \
 () New Database name: dev_assessment 
 
 
-## Step eight: Set up BLT 
+## Step five: Set up BLT 
 Acquia BLT on Windows has the following requirements:
 
 Running a 64-bit version of Windows 10 Anniversary update (build 14393 or greater).
@@ -142,6 +142,7 @@ function blt() {
 source ~/.bashrc
 
 
+
 ## Step nine: BLT setup 
 () cd /sites/dev-assessment/docroot \
 () run `blt setup`\ 
@@ -155,3 +156,9 @@ Once you are done go back to the dev desktop.
 
 ### Troubleshooting 
 SSH KEY public-key permission denied 
+
+#### Composer Issues 
+Delete the core and vendor directories so that composer can redownload them for you. 
+`rm -rf docroot/cor` \
+`rm -rf vendor` \
+
