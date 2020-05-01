@@ -139,9 +139,10 @@ or
 ## Step six: Add mysql to your path
 nano ~/.bashrc and add the following lines.
 ```
-export PATH="/Applications/DevDesktop/mysql/bin:$PATH" 
+export PATH="C:/Program Files (x86)/DevDesktop/mysql/bin:$PATH"
 export DEVDESKTOP_DRUPAL_SETTINGS_DIR="$HOME/.acquia/DevDesktop/DrupalSettings"
 ```
+
 
 ## Step seven: Set up Acquia dev desktop
 Select with an existing Drupal site located on my computer\
