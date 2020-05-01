@@ -66,7 +66,7 @@ Run the following command:
 `sudo apt-get update`
 
 Run the following command, based on your installed version of Acquia BLT:
-`sudo apt-get install -y php7.2-cli php7.2-curl php7.2-xml php7.2-mbstring php7.2-bz2 php7.2-gd php7.2-mysql mysql-client unzip git`
+`sudo apt-get install -y php7.3-cli php7.3-curl php7.3-xml php7.3-mbstring php7.3-bz2 php7.3-gd php7.3-mysql mysql-client unzip git`
 
 Run the following command:\
 `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`
