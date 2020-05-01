@@ -120,9 +120,30 @@ Before working with an Acquia BLT project, you must identify yourself to Git by 
 `git config --global user.name "Your Name"` \
 If you haven’t already configured an SSH identity (useful for working with projects on GitHub and interacting with your websites on Acquia Cloud), you should generate an SSH key.
 
+() Add function to .bashrc file 
+inside the Windows Subsystem \
+`nano  ~\.bashrc`\
+add this function
+```
+function blt() {
+  if [ "'git rev-parse --show-cdup 2> /dev/null'" != "" ]; then
+    GIT_ROOT=$(git rev-parse --show-cdup)
+  else
+    GIT_ROOT="."
+  fi
+
+  if [ -f "$GIT_ROOT/vendor/bin/blt" ]; then
+    $GIT_ROOT/vendor/bin/blt "$@"
+  else
+    echo "You must run this command from within a BLT-generated project repository."
+  fi
+}
+```
+source ~/.bashrc
+
 
 ## Step nine: BLT setup 
-() cd /sites/dev-assessment
+() cd /sites/dev-assessment/docroot \
 () run `blt setup`\ 
 () y
 () y
