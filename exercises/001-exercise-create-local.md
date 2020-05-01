@@ -145,13 +145,12 @@ source ~/.bashrc
 
 ## Step nine: BLT setup 
 () cd /sites/dev-assessment/docroot \
-() run `blt setup`\ 
-() y
-() y
+() run `blt setup` \ 
+() y \
+() y \
 
 ## step ten: drush into the site
 Once you are done go back to the dev desktop. 
-
 
 
 ### Troubleshooting 
