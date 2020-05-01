@@ -20,8 +20,17 @@ If not download the latest version of [composer](https://getcomposer.org/doc/00-
 `php -V` \
 If you do not have php download from here: https://www.foxinfotech.in/2019/01/how-to-install-php-7-3-on-windows-10.html \
 () BLT https://docs.acquia.com/blt/install/ \
-() After any new installs please restart your terminal.
-() Windows Subsystem
+() After any new installs please restart your terminal. \
+() Windows Subsystem \
+() Drush \
+`drush -V` \ 
+If you do not have drush \
+```
+wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar \
+chmod +x drush.phar \
+sudo mv drush.phar /usr/local/bin/drush \
+sudo cp /usr/local/bin/drush /usr/local/bin/drush.bat
+```
 
 ## Step one: Fork the repo
 Go to https://github.com/AllieRays/dev-assessment and fork the repository to a sites directory on your local machine.
@@ -57,7 +66,7 @@ Run the following command:
 `sudo apt-get update`
 
 Run the following command, based on your installed version of Acquia BLT:
-`sudo apt-get install -y php7.2-cli php7.2-curl php7.2-xml php7.2-mbstring php7.2-bz2 php7.2-gd php7.2-mysql mysql-client unzip git`
+`sudo apt-get install -y php7.3-cli php7.3-curl php7.3-xml php7.3-mbstring php7.3-bz2 php7.3-gd php7.3-mysql mysql-client unzip git`
 
 Run the following command:\
 `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`
