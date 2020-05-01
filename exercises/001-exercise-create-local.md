@@ -123,7 +123,7 @@ https://docs.acquia.com/dev-desktop/config/keygen/  \
 () Add your key to your github account.  \
 ... () Go to https://github.com/settings/keys and add a new ssh key  \
 ....() save the key as dev_assessment_key \
-....() type in `ssh-agent -s your_key_name`
+....() type in `ssh-agent -s your_key_name` \
 () Symlink your ssh key to your WSL `ln -s /mnt/c/Users/yourname/.ssh ~/.ssh`
 
 ## Step four: Clone your repo with SSH
@@ -153,7 +153,7 @@ Fill the following fields  \
 () New Database name: dev_assessment 
 
 
-## Step Eight: Intall Drush globally 
+## Step Eight: Install Drush globally 
 wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar \
 chmod +x drush.phar \
 sudo mv drush.phar /usr/local/bin/drush \
