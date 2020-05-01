@@ -145,9 +145,9 @@ source ~/.bashrc
 
 ## Step nine: BLT setup 
 () cd /sites/dev-assessment/docroot \
-() run `blt setup` \ 
+() run `blt setup` \
 () y \
-() y \
+() y 
 
 ## step ten: drush into the site
 Once you are done go back to the dev desktop. 
@@ -159,5 +159,5 @@ SSH KEY public-key permission denied
 #### Composer Issues 
 Delete the core and vendor directories so that composer can redownload them for you. 
 `rm -rf docroot/cor` \
-`rm -rf vendor` \
+`rm -rf vendor`
 
