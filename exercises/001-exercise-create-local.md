@@ -137,7 +137,7 @@ or
 
 
 ## Step six: Add mysql to your path
-nano ~/.bash_profile and add the following lines.
+nano ~/.bashrc and add the following lines.
 ```
 export PATH="/Applications/DevDesktop/mysql/bin:$PATH" 
 export DEVDESKTOP_DRUPAL_SETTINGS_DIR="$HOME/.acquia/DevDesktop/DrupalSettings"
