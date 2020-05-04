@@ -173,9 +173,11 @@ reopen it \
 run 
 `vagrant halt` \
 `vagrant up` \
+`vagrant provision` \
 `vagrant ssh` \
 Restart your apache server \
-`sudo service apache2 restart` 
+`sudo service apache2 restart` \
+`drush cr`
 
 ## Step fourteen: drush into the site
 Once you are done go back to the terminal \
@@ -187,6 +189,7 @@ Before working with an Acquia BLT project, you must identify yourself to Git by 
 `git config --global user.email "you@example.com"` \
 `git config --global user.name "Your Name"` \
 
+------ 
 
 ### Troubleshooting 
 SSH KEY public-key permission denied 
