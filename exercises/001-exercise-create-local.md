@@ -1,4 +1,4 @@
-# Local environment setup with remote dev desktop
+# Local environment setup with Windows, BLT and DrupalVM
 
 Check if you have the following system requirements: \
 () open your terminal.\
@@ -15,7 +15,7 @@ If you do not have php download from here: https://www.foxinfotech.in/2019/01/ho
 () After any new installs please restart your terminal. \
 () Windows Subsystem \
 () Drush \
-`drush -V` \ 
+`drush --version` \
 If you do not have drush \
 ```
 wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar \
