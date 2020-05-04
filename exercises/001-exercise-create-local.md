@@ -55,7 +55,7 @@ Run the following command:
 `sudo apt-get update`
 
 Run the following command, based on your installed version of Acquia BLT:
-`sudo apt-get install -y php7.3-cli php7.3-curl php7.3-xml php7.3-mbstring php7.3-bz2 php7.3-gd php7.3-mysql mysql-client unzip git`
+`sudo apt-get install -y php7.3-cli php7.3 php7.3-gd php7.3-curl php7.3-xml php7.3-mbstring php7.3-bz2 php7.3-gd php7.3-mysql mysql-client unzip git`
 
 Run the following command:\
 `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`
@@ -79,33 +79,8 @@ Before working with an Acquia BLT project, you must identify yourself to Git by 
 `git config --global user.name "Your Name"` \
 If you haven’t already configured an SSH identity (useful for working with projects on GitHub and interacting with your websites on Acquia Cloud), you should generate an SSH key.
 
-() Add function to .bashrc file 
-inside the Windows Subsystem \
-`nano  ~\.bashrc`\
-add this function
-```
-function blt() {
-  if [ "'git rev-parse --show-cdup 2> /dev/null'" != "" ]; then
-    GIT_ROOT=$(git rev-parse --show-cdup)
-  else
-    GIT_ROOT="."
-  fi
-
-  if [ -f "$GIT_ROOT/vendor/bin/blt" ]; then
-    $GIT_ROOT/vendor/bin/blt "$@"
-  else
-    echo "You must run this command from within a BLT-generated project repository."
-  fi
-}
-```
-source ~/.bashrc
-
-
 
 ## step two: download vagrant and virtualbox 
-
-`sudo apt-get vagrant`
-`sudo apt-get virtualbox`
 
 Download and install Vagrant \
 https://www.vagrantup.com/downloads.html \
@@ -115,7 +90,7 @@ https://www.virtualbox.org/wiki/Downloads \
 
 restart your computer \
 
-## step three: download cmder for windows
+## step three: Download cmder for windows
 https://github.com/cmderdev/cmder/releases/download/v1.3.14/cmder.zip
 
 ## Step four: Fork the repo
@@ -125,28 +100,36 @@ Go to https://github.com/AllieRays/dev-assessment and fork the repository to a s
 `git remote set-url upstream git@github.com:AllieRays/dev-assessment.git`
 run `git pull upstream master`
 
-## Step five: Create ssh keys and add them to github.
+## Step six: Create ssh keys and add them to github.
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+() cd to your ssh file 
+() cat your key ` C:\USERS\[username]\.ssh` \
 () Add your key to your github account.  \
 ... () Go to https://github.com/settings/keys and add a new ssh key  \
 ....() save the key as dev_assessment_key \
 ....() type in `ssh-agent -s your_key_name` \
 
-## Step six: Clone your repo with SSH
+## Step seven: Clone your repo with SSH
 `git clone git@github.com:[your-github-handle]/dev-assessment.git`
 
-## Step seven: Composer
-Run Composer to install dependencies  \
-`composer install` or `php -d memory_limit=-1 /usr/local/bin/composer install`
 
-## Step eight: Use BLT to configure your environment
+## Step eight: Install vagrant plugins 
+vagrant plugin install vagrant-vbguest
+ vagrant plugin install vagrant-hostsupdater
+
+
+## Step nine: Composer
+Run Composer to install dependencies  \
+`composer install` or `php -d memory_limit=-1 /usr/local/bin/composer install` @todo add windows path
+
+## Step ten: Use BLT to configure your environment
 () cd /sites/dev-assessment/docroot \
 () run `blt vm` \
 () y \
 () y 
 
 
-## Step nine: Add your ssh key to drupalvm 
+## Step eleven: Add your ssh key to drupalvm 
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 () Add your key to your github account.  \
 ... () Go to https://github.com/settings/keys and add a new ssh key  \
@@ -155,7 +138,7 @@ Run Composer to install dependencies  \
 () Symlink your ssh key to your WSL `ln -s /mnt/c/Users/yourname/.ssh ~/.ssh`
 
 
-## step ten: run cmder as admin
+## step twelve: run cmder as admin
 Open Cmder.
 In Cmder, right-click on the toolbar, click 'New Console...', then check the 'Run as administrator' checkbox and click Start.
 You need to run Cmder as an administrator
@@ -165,16 +148,16 @@ vagrant plugin install vagrant-vbguest \
 ** Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: Vagrant 2.2.x, VirtualBox 6.0.x, and Ansible 2.7.x \
 
 
-## Step eleven: Use the VM from now on
+## Step thirteen: Use the VM from now on
 `vagrant up` \ 
 ` vagrant ssh` \
 
  
- ## Step twelve: run blt setup
+ ## Step fourteen: run blt setup
  inside of the VM run 
  `blt setup`
 
-## Step thirteen: drush into the site
+## Step fifteen: drush into the site
 Once you are done go back to the terminal \
 `drush uli`
 
