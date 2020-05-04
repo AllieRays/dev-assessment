@@ -4,6 +4,7 @@ Check if you have the following system requirements: \
 () open your terminal.\
 () git `git`\
 If you do not have git download here: https://git-scm.com/download/win \
+() version control - for this exercise we will be using github. If you do not have a github username create one. 
 () composer `composer -V` \
 If not download the latest version of [composer](https://getcomposer.org/doc/00-intro.md#installation-windows).\
 () PHP 7.3 `php -V` \
@@ -120,7 +121,7 @@ Open your cmder terminal and create an ssh key.\
 ....() type in `ssh-agent -s your_key_name`
 
 ## Step five: Fork the repo
-Go to https://github.com/AllieRays/dev-assessment and fork the repository to a sites directory on your local machine.
+Go to https://github.com/AllieRays/dev-assessment and fork the repository to your personal github account. 
 
 ## Step six: Add an upstream to your forked repo 
 `git remote set-url upstream git@github.com:AllieRays/dev-assessment.git` \
