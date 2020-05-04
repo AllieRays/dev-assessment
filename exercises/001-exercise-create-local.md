@@ -13,7 +13,7 @@ If you do not have php download from here: https://www.foxinfotech.in/2019/01/ho
 () BLT `blt -V`
 If you do not have BLT add the following command to your .bash_profile or .bash_rc \
 `nano  ~\.bashrc`\
-add this function \
+add this function
 ```
 function blt() {
   if [ "'git rev-parse --show-cdup 2> /dev/null'" != "" ]; then
@@ -32,7 +32,7 @@ function blt() {
 then source your bash file
 `source ~/.bashrc`
 
-() Windows Subsystem \ 
+() Windows Subsystem \
 If you do not have window subsystem for linux please go to step one in this exercise \
 () Drush `drush --version` \
 If you do not have drush
@@ -43,7 +43,10 @@ sudo mv drush.phar /usr/local/bin/drush
 sudo cp /usr/local/bin/drush /usr/local/bin/drush.bat
 ```
 
-Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: Vagrant 2.2.x, VirtualBox 6.0.x, and Ansible 2.7.x
+Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: \
+() Vagrant 2.2.x \
+() VirtualBox 6.0.x \
+() Ansible 2.7.x
 
 
 ## Step one: Download [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)
