@@ -32,9 +32,9 @@ function blt() {
 then source your bash file
 `source ~/.bashrc`
 
-() Windows Subsystem (see step one) \
-() Drush \
-`drush --version` \
+() Windows Subsystem \ 
+If you do not have window subsystem for linux please go to step one in this exercise \
+() Drush `drush --version` \
 If you do not have drush
 ```
 wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar
@@ -91,13 +91,6 @@ Run the following command:\
 
 Run the following command:\
 `sudo apt-get install -y nodejs`
-
-()Configuring Git \
-Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:\
-`git config --global user.email "you@example.com"`\
-`git config --global user.name "Your Name"` \
-If you haven’t already configured an SSH identity (useful for working with projects on GitHub and interacting with your websites on Acquia Cloud), you should generate an SSH key.
-
 
 ## step two: download vagrant and virtualbox 
 
@@ -163,6 +156,13 @@ Run Composer to install dependencies  \
 ## Step thirteen: drush into the site
 Once you are done go back to the terminal \
 `drush uli`
+
+
+# Step fourteen: Configuring Git
+Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:\
+`git config --global user.email "you@example.com"` \
+`git config --global user.name "Your Name"` \
+
 
 ### Troubleshooting 
 SSH KEY public-key permission denied 
