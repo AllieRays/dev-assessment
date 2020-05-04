@@ -109,15 +109,8 @@ restart your computer
 ## step three: Download cmder for windows
 https://github.com/cmderdev/cmder/releases/download/v1.3.14/cmder.zip
 
-## Step four: Fork the repo
-Go to https://github.com/AllieRays/dev-assessment and fork the repository to a sites directory on your local machine.
-
-## Step five: Add an upstream to your forked repo 
-`git remote set-url upstream git@github.com:AllieRays/dev-assessment.git` \
-run \
- `git pull upstream master`
-
-## Step six: Create ssh keys and add them to github.
+## Step four: Create ssh keys and add them to github.
+Open your cmder terminal and create an ssh key.\
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` \
 () cd to your ssh file \
 () cat your key ` C:\USERS\[username]\.ssh` \
@@ -125,6 +118,14 @@ run \
 ... () Go to https://github.com/settings/keys and add a new ssh key  \
 ....() save the key as dev_assessment_key \
 ....() type in `ssh-agent -s your_key_name`
+
+## Step five: Fork the repo
+Go to https://github.com/AllieRays/dev-assessment and fork the repository to a sites directory on your local machine.
+
+## Step six: Add an upstream to your forked repo 
+`git remote set-url upstream git@github.com:AllieRays/dev-assessment.git` \
+run \
+ `git pull upstream master`
 
 ## Step seven: Clone your repo with SSH
 `git clone git@github.com:[your-github-handle]/dev-assessment.git`
