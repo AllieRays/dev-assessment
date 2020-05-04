@@ -72,8 +72,7 @@ Run the following command:\
 Run the following command:\
 `sudo apt-get install -y nodejs`
 
-() Configuring Git \
-
+()Configuring Git \
 Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:\
 `git config --global user.email "you@example.com"`\
 `git config --global user.name "Your Name"` \
@@ -98,7 +97,8 @@ Go to https://github.com/AllieRays/dev-assessment and fork the repository to a s
 
 ## Step five: Add an upstream to your forked repo 
 `git remote set-url upstream git@github.com:AllieRays/dev-assessment.git` \
-run `git pull upstream master`
+run \
+ `git pull upstream master`
 
 ## Step six: Create ssh keys and add them to github.
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` \
@@ -134,8 +134,8 @@ Run Composer to install dependencies  \
 () y 
 
 ## Step eleven: Use the VM from now on
-`vagrant up` \ 
-` vagrant ssh` \
+`vagrant up` \
+`vagrant ssh`
 
  ## Step twelve: run blt setup
  inside of the VM run 
