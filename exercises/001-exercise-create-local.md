@@ -73,7 +73,7 @@ Run the following command:\
 Run the following command:\
 `sudo apt-get install -y nodejs`
 
-## step two: download vagrant and virtualbox 
+## Step two: download vagrant and virtualbox 
 
 Download and install Vagrant \
 https://www.vagrantup.com/downloads.html
@@ -83,11 +83,11 @@ https://www.virtualbox.org/wiki/Downloads
 
 restart your computer
 
-## step three: Download cmder for windows
+## Step three: Download cmder for windows
 https://github.com/cmderdev/cmder/releases/download/v1.3.14/cmder.zip
 
 
-## step four: run cmder as admin
+## Step four: run cmder as admin
 Open Cmder as admin.
 In Cmder, right-click on the toolbar, click 'New Console...', then check the 'Run as administrator' checkbox and click Start.
 You need to run Cmder as an administrator
@@ -113,7 +113,7 @@ Go to https://github.com/AllieRays/dev-assessment and fork the repository to you
 `git clone git@github.com:[your-github-handle]/dev-assessment.git`
 
 ## Step eight: Add an upstream to your forked repo 
-`git remote set-url upstream git@github.com:AllieRays/dev-assessment.git` \
+`git remote add upstream git@github.com:AllieRays/dev-assessment.git` \
 run \
  `git pull upstream master`
 
@@ -162,17 +162,27 @@ function blt() {
 then source your bash file
 `source ~/.bashrc`
 
- ## Step twelve: run blt setup
+## Step twelve: run blt setup
  inside of the VM run 
  `cd /var/www/dev-assessment`
  `blt setup`
+ 
+## Step thirteen: Turn if off and back on again for safe measure 
+close your cmdr terminal \
+reopen it \
+run 
+`vagrant halt` \
+`vagrant up` \
+`vagrant ssh` \
+Restart your apache server \
+`sudo service apache2 restart` 
 
-## Step thirteen: drush into the site
+## Step fourteen: drush into the site
 Once you are done go back to the terminal \
+`cd /var/www/dev-assessment/docroot`  \
 `drush uli`
 
-
-# Step fourteen: Configuring Git
+# Step fifteen: Configuring Git
 Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:\
 `git config --global user.email "you@example.com"` \
 `git config --global user.name "Your Name"` \
