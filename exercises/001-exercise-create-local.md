@@ -103,8 +103,8 @@ Open your cmder terminal and create an ssh key.\
 () cat your key ` C:\USERS\[username]\.ssh` \
 () Add your key to your github account.  \
 ... () Go to https://github.com/settings/keys and add a new ssh key  \
-....() save the key as dev_assessment_key \
-....() type in `ssh-agent -s your_key_name`
+....() save the key as dev_assessment_key on github \
+....() in your cmder terminal type in `ssh-agent -s dev_assessment_key`
 
 ## Step six: Fork the repo
 Go to https://github.com/AllieRays/dev-assessment and fork the repository to your personal github account. 
