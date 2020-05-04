@@ -1,16 +1,17 @@
 # Local environment setup with Windows, BLT and DrupalVM
 
+## System Requirements
 Check if you have the following system requirements: \
 () open your terminal.\
 () git `git`\
 If you do not have git download here: https://git-scm.com/download/win \
-() version control - for this exercise we will be using github. If you do not have a github username create one. 
+() version control - for this exercise we will be using github. If you do not have a github username create one. \
 () composer `composer -V` \
 If not download the latest version of [composer](https://getcomposer.org/doc/00-intro.md#installation-windows).\
 () PHP 7.3 `php -V` \
 If you do not have php download from here: https://www.foxinfotech.in/2019/01/how-to-install-php-7-3-on-windows-10.html \
 () BLT `blt -V`
-If you do not have BLT add the following command to your .bash_profile or .bash_rc
+If you do not have BLT add the following command to your .bash_profile or .bash_rc \
 `nano  ~\.bashrc`\
 add this function \
 ```
@@ -31,17 +32,18 @@ function blt() {
 then source your bash file
 `source ~/.bashrc`
 
-() Windows Subsystem (see step one)
+() Windows Subsystem (see step one) \
 () Drush \
 `drush --version` \
-If you do not have drush \
+If you do not have drush
 ```
 wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar
 chmod +x drush.phar
 sudo mv drush.phar /usr/local/bin/drush
 sudo cp /usr/local/bin/drush /usr/local/bin/drush.bat
 ```
-** Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: Vagrant 2.2.x, VirtualBox 6.0.x, and Ansible 2.7.x
+
+Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: Vagrant 2.2.x, VirtualBox 6.0.x, and Ansible 2.7.x
 
 
 ## Step one: Download [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)
