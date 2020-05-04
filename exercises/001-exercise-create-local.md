@@ -2,21 +2,38 @@
 
 Check if you have the following system requirements: \
 () open your terminal.\
-() git \
-`git`\
+() git `git`\
 If you do not have git download here: https://git-scm.com/download/win \
-() composer \
-`composer -V` \
+() composer `composer -V` \
 If not download the latest version of [composer](https://getcomposer.org/doc/00-intro.md#installation-windows).\
-() PHP 7.3 - \
-`php -V` \
+() PHP 7.3 `php -V` \
 If you do not have php download from here: https://www.foxinfotech.in/2019/01/how-to-install-php-7-3-on-windows-10.html \
-() BLT https://docs.acquia.com/blt/install/ \
-() After any new installs please restart your terminal. \
-() Windows Subsystem \
+() BLT `blt -V`
+If you do not have BLT add the following command to your .bash_profile or .bash_rc
+`nano  ~\.bashrc`\
+add this function \
+```
+function blt() {
+  if [ "'git rev-parse --show-cdup 2> /dev/null'" != "" ]; then
+    GIT_ROOT=$(git rev-parse --show-cdup)
+  else
+    GIT_ROOT="."
+  fi
+
+  if [ -f "$GIT_ROOT/vendor/bin/blt" ]; then
+    $GIT_ROOT/vendor/bin/blt "$@"
+  else
+    echo "You must run this command from within a BLT-generated project repository."
+  fi
+}
+```
+then source your bash file
+`source ~/.bashrc`
+
+() Windows Subsystem (see step one)
 () Drush \
 `drush --version` \
-If you do not have drush
+If you do not have drush \
 ```
 wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar
 chmod +x drush.phar
