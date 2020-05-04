@@ -1,2 +1,2 @@
 options:
-  uri: 'http://dev-assessment.dd:8083/'
+  uri: 'local.dev-assessment.com'

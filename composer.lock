@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "495fb4315540f96e3ecce9038d3c80d2",
+    "content-hash": "6f8df2d90553283fd99e645188e231e4",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4590,52 +4590,6 @@
                 "web"
             ],
             "time": "2017-12-06T20:35:40+00:00"
-        },
-        {
-            "name": "drupal/drush",
-            "version": "6.0.0-rc4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/drush.git",
-                "reference": "8.x-6.0-rc4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/drush-8.x-6.0-rc4.zip",
-                "reference": "8.x-6.0-rc4",
-                "shasum": "b937035f9de947190cc2438decb56483ff7cc1cd"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-6.x": "6.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-6.0-rc4",
-                    "datestamp": "1376806255",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
-                }
-            ],
-            "homepage": "https://www.drupal.org/project/drush",
-            "support": {
-                "source": "https://git.drupalcode.org/project/drush"
-            }
         },
         {
             "name": "drupal/embed",
@@ -10562,16 +10516,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.20",
+            "version": "0.12.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "3d79c7109223aeb2d1157870c5d8875545403917"
+                "reference": "59090e1b84efca9310e58586aeb787521aa00b10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/3d79c7109223aeb2d1157870c5d8875545403917",
-                "reference": "3d79c7109223aeb2d1157870c5d8875545403917",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/59090e1b84efca9310e58586aeb787521aa00b10",
+                "reference": "59090e1b84efca9310e58586aeb787521aa00b10",
                 "shasum": ""
             },
             "require": {
@@ -10600,7 +10554,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-05-03T17:12:46+00:00"
+            "time": "2020-05-04T09:21:25+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -14011,6 +13965,45 @@
             "time": "2019-10-21T16:45:58+00:00"
         },
         {
+            "name": "geerlingguy/drupal-vm",
+            "version": "5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geerlingguy/drupal-vm.git",
+                "reference": "f8bb9218f068994f731647997c7ace195f6ee193"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geerlingguy/drupal-vm/zipball/f8bb9218f068994f731647997c7ace195f6ee193",
+                "reference": "f8bb9218f068994f731647997c7ace195f6ee193",
+                "shasum": ""
+            },
+            "type": "vm",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Geerling",
+                    "homepage": "https://www.jeffgeerling.com"
+                },
+                {
+                    "name": "Oskar Schöldström",
+                    "homepage": "http://oxy.fi"
+                }
+            ],
+            "description": "A VM for local Drupal development, built with Vagrant + Ansible",
+            "homepage": "https://www.drupalvm.com",
+            "keywords": [
+                "drupal",
+                "vagrant",
+                "virtual machine",
+                "vm"
+            ],
+            "time": "2020-03-20T19:32:20+00:00"
+        },
+        {
             "name": "jarnaiz/behat-junit-formatter",
             "version": "v1.3.2",
             "source": {
@@ -15192,7 +15185,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "acquia/lightning": 20,
-        "drupal/drush": 5,
         "acquia/blt-require-dev": 20
     },
     "prefer-stable": true,

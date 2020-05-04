@@ -1,5 +1,13 @@
 # Local environment setup with remote dev desktop
 
+There are [many different local environment solutions](https://docs.acquia.com/blt/install/local-development/).
+For the purpose of this exercise we are going to use [BLT](https://docs.acquia.com/blt/) with [Dev Desktop](https://docs.acquia.com/dev-desktop/).
+ 
+Acquia Dev Desktop provides the quickest way to configure and run Drupal for local development on your Mac or Windows PC. 
+Acquia Dev Desktop is an xAMP stack (or DAMP stack) installer, providing a full Drupal-specific stack that includes Apache, MySQL, and PHP. 
+
+Also, because of its integration with Acquia Cloud, Acquia Dev Desktop provides the easiest method to publish, develop, and synchronize your local Drupal websites onto the web.
+
 Check if you have the following system requirements: \
 () open your terminal.\
 () git \
@@ -24,10 +32,13 @@ sudo mv drush.phar /usr/local/bin/drush \
 sudo cp /usr/local/bin/drush /usr/local/bin/drush.bat
 ```
 
+## Step one: Fork the repo
+Go to https://github.com/AllieRays/dev-assessment and fork the repository to a sites directory on your local machine.
 
+## Step two: Download Dev Desktop
+Obtain a free version of the [Acquia Dev Desktop](https://dev.acquia.com/downloads) program.
 
-## Step one: Download [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)
-https://docs.microsoft.com/en-us/windows/wsl/install-win10?redirectedfrom=MSDN
+## Step three: Downloand [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)
 Acquia BLT on Windows has the following requirements:
 
 Running a 64-bit version of Windows 10 Anniversary update (build 14393 or greater).
@@ -101,77 +112,62 @@ function blt() {
 source ~/.bashrc
 
 
-
-## step two: download vagrant and virtualbox 
-
-Download and install Vagrant \
-https://www.vagrantup.com/downloads.html \
-
-Download and install Virtualbox \
-https://www.virtualbox.org/wiki/Downloads \
-
-restart your computer \
-
-## step three: download cmder for windows
-https://github.com/cmderdev/cmder/releases/download/v1.3.14/cmder.zip
-
-## Step four: Fork the repo
-Go to https://github.com/AllieRays/dev-assessment and fork the repository to a sites directory on your local machine.
-
-## Step five: Create ssh keys and add them to github.
-`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+## Step three: Create ssh keys with Dev Desktop and add them to github.
+https://docs.acquia.com/dev-desktop/config/keygen/  \
+() Create key  \
+... () On the Acquia Dev Desktop menu, click Preferences.   \
+... () On the General tab, click Generate.   \
+........ * do not add a password  \
+........ * Key password is empty. Do you really want to save your private key unencrypted? click YES  \
+........* name your key dev_assessment_key and save to your .ssh directory.  \
 () Add your key to your github account.  \
 ... () Go to https://github.com/settings/keys and add a new ssh key  \
 ....() save the key as dev_assessment_key \
 ....() type in `ssh-agent -s your_key_name` \
 () Symlink your ssh key to your WSL `ln -s /mnt/c/Users/yourname/.ssh ~/.ssh`
 
-## Step six: Clone your repo with SSH
+## Step four: Clone your repo with SSH
 `git clone git@github.com:[your-github-handle]/dev-assessment.git`
 
-## Step seven: Composer
+## Step five: Composer
 Run Composer to install dependencies  \
-`composer install` or `php -d memory_limit=-1 /usr/local/bin/composer install`
+`composer install`
+or 
+`php -d memory_limit=-1 /usr/local/bin/composer install`
 
-## Step eight: Use BLT to configure your environment
+
+## Step six: Add mysql to your path
+nano ~/.bashrc and add the following lines.
+```
+export PATH="C:/Program Files (x86)/DevDesktop/mysql/bin:$PATH"
+export DEVDESKTOP_DRUPAL_SETTINGS_DIR="$HOME/.acquia/DevDesktop/DrupalSettings"
+```
+
+
+## Step seven: Set up Acquia dev desktop
+Select with an existing Drupal site located on my computer\
+Fill the following fields  \
+() Local codebase folder: `[your-path]/dev-assessment/docroot`   \
+() Local sitename: dev-assessment   \
+() Use PHP: 7.3.9   \
+() Database: Start with an sql dump file. Dump File: dev-assessment04302020.sql \
+() New Database name: dev_assessment 
+
+
+## Step Eight: Install Drush globally 
+wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar \
+chmod +x drush.phar \
+sudo mv drush.phar /usr/local/bin/drush \
+sudo cp /usr/local/bin/drush /usr/local/bin/drush.bat
+
+## Step nine: BLT setup 
 () cd /sites/dev-assessment/docroot \
-() run `blt vm` \
+() run `blt setup` \
 () y \
 () y 
 
-
-## Step nine: Add your ssh key to drupalvm 
-`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
-() Add your key to your github account.  \
-... () Go to https://github.com/settings/keys and add a new ssh key  \
-....() save the key as dev_assessment_key \
-....() type in `ssh-agent -s your_key_name` \
-() Symlink your ssh key to your WSL `ln -s /mnt/c/Users/yourname/.ssh ~/.ssh`
-
-
-## step ten: run cmder as admin
-Open Cmder.
-In Cmder, right-click on the toolbar, click 'New Console...', then check the 'Run as administrator' checkbox and click Start.
-You need to run Cmder as an administrator
-
-run the following command 
-vagrant plugin install vagrant-vbguest \
-** Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: Vagrant 2.2.x, VirtualBox 6.0.x, and Ansible 2.7.x \
-
-
-## Step eleven: Use the VM from now on
-`vagrant up` \ 
-` vagrant ssh` \
-
- 
- ## Step twelve: run blt setup
- inside of the VM run 
- `blt setup`
-
-## Step thirteen: drush into the site
-Once you are done go back to the terminal \
-`drush uli`
-
+## Step ten: drush into the site
+Once you are done go back to the dev desktop. 
 
 ### Troubleshooting 
 SSH KEY public-key permission denied 
