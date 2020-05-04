@@ -108,7 +108,7 @@ restart your computer
 ## step three: Download cmder for windows
 https://github.com/cmderdev/cmder/releases/download/v1.3.14/cmder.zip
 
-## Step four: Create ssh keys and add them to github.
+## Step four: Create ssh keys inside of your cmder terminal and add them to github.
 Open your cmder terminal and create an ssh key.\
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` \
 () cd to your ssh file \
@@ -121,13 +121,13 @@ Open your cmder terminal and create an ssh key.\
 ## Step five: Fork the repo
 Go to https://github.com/AllieRays/dev-assessment and fork the repository to your personal github account. 
 
-## Step six: Add an upstream to your forked repo 
+## Step six: Clone your repo with SSH
+`git clone git@github.com:[your-github-handle]/dev-assessment.git`
+
+## Step seven: Add an upstream to your forked repo 
 `git remote set-url upstream git@github.com:AllieRays/dev-assessment.git` \
 run \
  `git pull upstream master`
-
-## Step seven: Clone your repo with SSH
-`git clone git@github.com:[your-github-handle]/dev-assessment.git`
 
 ## step eight: run cmder as admin
 Open Cmder.
