@@ -26,8 +26,8 @@ vagrant_synced_folders:
 
 drupal_build_composer_project: false
 drupal_composer_path: false
-drupal_composer_install_dir: "/var/www/dev_assessment"
-drupal_core_path: "/var/www/dev_assessment/docroot"
+drupal_composer_install_dir: "/var/www/dev-assessment"
+drupal_core_path: "/var/www/dev-assessment/docroot"
 ssh_home: /var/www/dev-assessment
 
 # Multisite installations should configure additional domains here.
