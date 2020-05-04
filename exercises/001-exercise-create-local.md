@@ -23,7 +23,7 @@ chmod +x drush.phar
 sudo mv drush.phar /usr/local/bin/drush
 sudo cp /usr/local/bin/drush /usr/local/bin/drush.bat
 ```
-
+** Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: Vagrant 2.2.x, VirtualBox 6.0.x, and Ansible 2.7.x
 
 
 ## Step one: Download [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)
@@ -118,8 +118,6 @@ In Cmder, right-click on the toolbar, click 'New Console...', then check the 'Ru
 You need to run Cmder as an administrator
 
 run the following command 
-vagrant plugin install vagrant-vbguest \
-** Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: Vagrant 2.2.x, VirtualBox 6.0.x, and Ansible 2.7.x \
 `vagrant plugin install vagrant-vbguest` \
  `vagrant plugin install vagrant-hostsupdater`
 
