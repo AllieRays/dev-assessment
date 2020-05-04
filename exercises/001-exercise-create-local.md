@@ -83,12 +83,12 @@ If you haven’t already configured an SSH identity (useful for working with pro
 ## step two: download vagrant and virtualbox 
 
 Download and install Vagrant \
-https://www.vagrantup.com/downloads.html \
+https://www.vagrantup.com/downloads.html
 
 Download and install Virtualbox \
-https://www.virtualbox.org/wiki/Downloads \
+https://www.virtualbox.org/wiki/Downloads
 
-restart your computer \
+restart your computer
 
 ## step three: Download cmder for windows
 https://github.com/cmderdev/cmder/releases/download/v1.3.14/cmder.zip
@@ -97,26 +97,31 @@ https://github.com/cmderdev/cmder/releases/download/v1.3.14/cmder.zip
 Go to https://github.com/AllieRays/dev-assessment and fork the repository to a sites directory on your local machine.
 
 ## Step five: Add an upstream to your forked repo 
-`git remote set-url upstream git@github.com:AllieRays/dev-assessment.git`
+`git remote set-url upstream git@github.com:AllieRays/dev-assessment.git` \
 run `git pull upstream master`
 
 ## Step six: Create ssh keys and add them to github.
-`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
-() cd to your ssh file 
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` \
+() cd to your ssh file \
 () cat your key ` C:\USERS\[username]\.ssh` \
 () Add your key to your github account.  \
 ... () Go to https://github.com/settings/keys and add a new ssh key  \
 ....() save the key as dev_assessment_key \
-....() type in `ssh-agent -s your_key_name` \
+....() type in `ssh-agent -s your_key_name`
 
 ## Step seven: Clone your repo with SSH
 `git clone git@github.com:[your-github-handle]/dev-assessment.git`
 
+## step eight: run cmder as admin
+Open Cmder.
+In Cmder, right-click on the toolbar, click 'New Console...', then check the 'Run as administrator' checkbox and click Start.
+You need to run Cmder as an administrator
 
-## Step eight: Install vagrant plugins 
-vagrant plugin install vagrant-vbguest
- vagrant plugin install vagrant-hostsupdater
-
+run the following command 
+vagrant plugin install vagrant-vbguest \
+** Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: Vagrant 2.2.x, VirtualBox 6.0.x, and Ansible 2.7.x \
+`vagrant plugin install vagrant-vbguest` \
+ `vagrant plugin install vagrant-hostsupdater`
 
 ## Step nine: Composer
 Run Composer to install dependencies  \
@@ -128,39 +133,17 @@ Run Composer to install dependencies  \
 () y \
 () y 
 
-
-## Step eleven: Add your ssh key to drupalvm 
-`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
-() Add your key to your github account.  \
-... () Go to https://github.com/settings/keys and add a new ssh key  \
-....() save the key as dev_assessment_key \
-....() type in `ssh-agent -s your_key_name` \
-() Symlink your ssh key to your WSL `ln -s /mnt/c/Users/yourname/.ssh ~/.ssh`
-
-
-## step twelve: run cmder as admin
-Open Cmder.
-In Cmder, right-click on the toolbar, click 'New Console...', then check the 'Run as administrator' checkbox and click Start.
-You need to run Cmder as an administrator
-
-run the following command 
-vagrant plugin install vagrant-vbguest \
-** Versions: Make sure you're running the latest releases of Vagrant, VirtualBox, and Ansible—as of early 2019, Drupal VM recommends: Vagrant 2.2.x, VirtualBox 6.0.x, and Ansible 2.7.x \
-
-
-## Step thirteen: Use the VM from now on
+## Step eleven: Use the VM from now on
 `vagrant up` \ 
 ` vagrant ssh` \
 
- 
- ## Step fourteen: run blt setup
+ ## Step twelve: run blt setup
  inside of the VM run 
  `blt setup`
 
-## Step fifteen: drush into the site
+## Step thirteen: drush into the site
 Once you are done go back to the terminal \
 `drush uli`
-
 
 ### Troubleshooting 
 SSH KEY public-key permission denied 
