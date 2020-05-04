@@ -16,11 +16,11 @@ If you do not have php download from here: https://www.foxinfotech.in/2019/01/ho
 () Windows Subsystem \
 () Drush \
 `drush --version` \
-If you do not have drush \
+If you do not have drush
 ```
-wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar \
-chmod +x drush.phar \
-sudo mv drush.phar /usr/local/bin/drush \
+wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar
+chmod +x drush.phar
+sudo mv drush.phar /usr/local/bin/drush
 sudo cp /usr/local/bin/drush /usr/local/bin/drush.bat
 ```
 
