@@ -117,7 +117,7 @@ Open Cmder.
 In Cmder, right-click on the toolbar, click 'New Console...', then check the 'Run as administrator' checkbox and click Start.
 You need to run Cmder as an administrator
 
-run the following command 
+run the following command \
 `vagrant plugin install vagrant-vbguest` \
  `vagrant plugin install vagrant-hostsupdater`
 
