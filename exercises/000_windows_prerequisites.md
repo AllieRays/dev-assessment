@@ -1,7 +1,7 @@
 ## Acquia BLT with DDev for Windows with all Prerequisites as of May 8 2020 
 
-Required prerequisites  \
-* Windows 10 build 1909 \
+Required prerequisites  
+* Windows 10 build 1909
 * Admin permissions 
 
 At the end of this exercise the following system requirements should be setup \
@@ -18,8 +18,8 @@ At the end of this exercise the following system requirements should be setup \
 ## Docker 
 Install [Docker](https://www.docker.com/community-edition)  version 18.06 or higher for Windows 
 
--   docker-compose 1.21.0 and higher (bundled with Docker in Docker Desktop for Mac and Docker Desktop for Windows) \
-    -   Windows 10 64-bit Pro or Enterprise with  [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
+-   docker-compose 1.21.0 and higher (bundled with Docker in Docker Desktop for Mac and Docker Desktop for Windows)
+    -   Windows 10 64-bit Pro or Enterprise with  [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/) 
 -   Hyper-V and Containers Windows features must be enabled.
 -   The following hardware prerequisites are required to successfully run Client Hyper-V on Windows 10:
     -   64 bit processor with  [Second Level Address Translation (SLAT)](http://en.wikipedia.org/wiki/Second_Level_Address_Translation)
@@ -29,15 +29,15 @@ Install [Docker](https://www.docker.com/community-edition)  version 18.06 or hig
  
  
 ### Docker Settings 
-once docker is downloaded start docker desktop
-then from the toolbar icon right click settings 
-Click on "Switch to Linux Containers"
-Then Click on settings 
-() change the following settings
-... () start docker deskop when you log in
-... () expose daemon ton tcp://localhost:2375 without TLS
-..... () Navigate to Resources -> File Sharing 
-..... () Check C drive 
+once docker is downloaded start docker desktop \
+then from the toolbar icon right click settings \
+Click on "Switch to Linux Containers" \
+Then Click on settings \
+() change the following settings \
+... () start docker deskop when you log in \
+... () expose daemon ton tcp://localhost:2375 without TLS \
+..... () Navigate to Resources -> File Sharing \
+..... () Check C drive \
 ..... () Apply and Restart Docker 
 
 
@@ -46,23 +46,23 @@ Copy the following text and paste it into powershell
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) 
 ```
-() Wait a few seconds for the command to complete.
+() Wait a few seconds for the command to complete. \
 () If you don't see any errors, you are ready to use Chocolatey! Type  `choco`  or  `choco -?`  now, or see  [Getting Started](https://chocolatey.org/docs/getting-started)  for usage instructions.
 
 
 ## PHP 7.3
-`choco install php --version=7.3.0`
-update your php.ini file located at `C:\tools\php73\php.ini`
-update your memory_limit to `256M`
-remove `;`to uncomment `extension=gd2`
+`choco install php --version=7.3.0` \
+update your php.ini file located at `C:\tools\php73\php.ini` \
+update your memory_limit to `256M` \
+remove `;`to uncomment `extension=gd2` 
 
 ## Composer 
-Install composer globally 
+Install composer globally \
 `choco install composer`
 
 ## WSL 
-Download [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)
-You must create a UNIX username with a password when prompted at the end of the installation process. Certain Acquia BLT commands will not function if you install the Windows Subsystem for Linux using an account without a password.
+Download [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) \
+You must create a UNIX username with a password when prompted at the end of the installation process. Certain Acquia BLT  commands will not function if you install the Windows Subsystem for Linux using an account without a password.
 
 To install the required applications for Acquia BLT (including PHP, Node.js, Git, and Composer), run the following commands:
 Run the following command, and press Enter when prompted:
@@ -104,6 +104,8 @@ WSL, windows and docker do not play nice together with file path sharing. We nee
 root = /
 options = "metadata"
 ```
+save and close 
+
 
 () Configuring Git \
 
@@ -135,8 +137,8 @@ source ~/.bashrc
 
 
 ## Restart your computer
-() Save and close and restart your computer. 
-() Once the windows machine is up and running restart docker and check the settings listed above
+() Save and close and restart your computer. \
+() Once the windows machine is up and running restart docker and check the settings listed above \
 Everything else will be done again with Unbuntu 
 
 ---
