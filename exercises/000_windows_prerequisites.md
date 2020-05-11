@@ -5,7 +5,7 @@ Required prerequisites
 * Admin permissions 
 
 At the end of this exercise the following system requirements should be setup \
-() Windows 10 build 1909 with Admin permissions \
+() Windows 10 build 1909 with Admin permissions and Hyper V enabled\
 () A windows package manager \
 () Docker \
 () Docker Compose 1.21.0 and higher  \
