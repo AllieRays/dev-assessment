@@ -110,8 +110,8 @@ save and close
 
 () Configuring Git
 Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:\
-`git config --global user.email "you@example.com"`\
-`git config --global user.name "Your Name"` \
+`git config --global user.email "you@example.com"`
+`git config --global user.name "Your Name"` 
 
 ()BLT  
 Manually add this BLT function inide of WSL with bash to .bashrc file \
@@ -176,16 +176,16 @@ Verify that Docker Engine is installed correctly by running the  `hello-world`  
 ```
 
 ## Create your ssh keys 
-Open your wsl terminal as admin  with bash and create an ssh key.\  
+Open your wsl terminal as admin  with bash and create an ssh key. 
 `bash`
-`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` \  
-() cd to your ssh file \  
-... () Go to https://github.com/settings/keys and add a new ssh key  \  
-....() save the key as username_public_key on github \  
-() cat your key ` C:\USERS\[username]\.ssh` \  
-() Add your key to your github account.  \  
-... () Go to https://github.com/settings/keys and add a new ssh key  \  
-....() save the key on github \  
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` 
+() cd to your ssh file 
+... () Go to https://github.com/settings/keys and add a new ssh key  
+....() save the key as username_public_key on github 
+() cat your key ` C:\USERS\[username]\.ssh` 
+() Add your key to your github account. 
+... () Go to https://github.com/settings/keys and add a new ssh key  
+....() save the key on github
 ....() in your wsl terminal type in `ssh-agent -s id_rsa`
 
 ## Install a text editor Sublime or equivalent 
