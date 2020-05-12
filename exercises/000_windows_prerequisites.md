@@ -207,3 +207,7 @@ https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-fla
 
 () You must have Windows 10 build 1909 \
 https://www.microsoft.com/en-us/software-download/windows10ISO
+
+() WSL must be running as a linux container\ 
+https://forums.docker.com/t/cli-to-switch-between-linux-and-windows-images/30297/3
+
