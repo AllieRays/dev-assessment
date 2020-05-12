@@ -164,7 +164,7 @@ Before working with an Acquia BLT project, you must identify yourself to Git by 
 `git config --global user.name "Your Name"` 
 
 ## BLT  
-Manually add this BLT function inide of WSL with bash to .bashrc file \
+Manually add this BLT function inside of WSL with bash to .bashrc file \
 `nano  ~\.bashrc`
 
 add this function
@@ -191,7 +191,7 @@ function blt() {
 https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe
 
 
-## Troubleshotting 
+## Troubleshooting 
 () You must have Hyper V enabled \
 https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
 
