@@ -1,4 +1,5 @@
 ## Acquia BLT with DDev for Windows with all Prerequisites as of May 8 2020 
+This exercises purpose is to ensure your Windows 10 machine has all of the following prerequisites required to run BLT and DDEV to create a local development environment.
 
 Required prerequisites  
 * Windows 10 build 1909
@@ -107,16 +108,14 @@ options = "metadata"
 save and close 
 
 
-() Configuring Git \
-
+() Configuring Git
 Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:\
 `git config --global user.email "you@example.com"`\
 `git config --global user.name "Your Name"` \
-If you haven’t already configured an SSH identity (useful for working with projects on GitHub and interacting with your websites on Acquia Cloud), you should generate an SSH key.
 
-() Add function to .bashrc file 
-inside the Windows Subsystem \
-`nano  ~\.bashrc`\
+()BLT  
+Manually add this BLT function inide of WSL with bash to .bashrc file \
+`nano  ~\.bashrc` \ 
 add this function
 ```
 function blt() {
@@ -175,7 +174,7 @@ Verify that Docker Engine is installed correctly by running the  `hello-world`  
 ```
 
 ## Create your ssh keys 
-Open your wsl terminal as admin and create an ssh key.\  
+Open your wsl terminal as admin  with bash and create an ssh key.\  
 `bash`
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` \  
 () cd to your ssh file \  
@@ -189,3 +188,20 @@ Open your wsl terminal as admin and create an ssh key.\
 
 ## Install a text editor Sublime or equivalent 
 https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe
+
+
+## Troubleshotting 
+() You must have Hyper V enabled \
+https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v \
+
+() All scripts must be in UNIX format (not windows). If you edit/create a file on windows you must make sure your line breaks are LF not CRFL \
+https://stackoverflow.com/questions/27810758/how-to-replace-crlf-with-lf-in-a-single-file
+
+() You must run all blt commands inside of bash inside of WSL \
+https://devblogs.microsoft.com/commandline/a-guide-to-invoking-wsl/ \
+
+() You must ensure file pathing is correct see Ensure Volume Mounts Work from above. \
+https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
+
+() You must have Windows 10 build 1909 \
+https://www.microsoft.com/en-us/software-download/windows10ISO
