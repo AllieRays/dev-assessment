@@ -194,20 +194,20 @@ https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe
 
 ## Troubleshotting 
 () You must have Hyper V enabled \
-https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v \
+https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
 
 () All scripts must be in UNIX format (not windows). If you edit/create a file on windows you must make sure your line breaks are LF not CRFL \
 https://stackoverflow.com/questions/27810758/how-to-replace-crlf-with-lf-in-a-single-file
 
 () You must run all blt commands inside of bash inside of WSL \
-https://devblogs.microsoft.com/commandline/a-guide-to-invoking-wsl/ \
+https://devblogs.microsoft.com/commandline/a-guide-to-invoking-wsl/
 
 () You must ensure file pathing is correct see Ensure Volume Mounts Work from above. \
 https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
 
-() You must have Windows 10 build 1909 \
+() You must have Windows 10 build 1909 
 https://www.microsoft.com/en-us/software-download/windows10ISO
 
-() WSL must be running as a linux container\ 
+() WSL must be running as a linux container  
 https://forums.docker.com/t/cli-to-switch-between-linux-and-windows-images/30297/3
 
