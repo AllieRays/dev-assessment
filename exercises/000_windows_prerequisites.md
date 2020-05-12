@@ -113,7 +113,7 @@ Before working with an Acquia BLT project, you must identify yourself to Git by 
 `git config --global user.email "you@example.com"`
 `git config --global user.name "Your Name"` 
 
-()BLT  
+() BLT  
 Manually add this BLT function inide of WSL with bash to .bashrc file \
 `nano  ~\.bashrc`
 
@@ -134,17 +134,17 @@ function blt() {
   fi
 }
 ```
-source ~/.bashrc
+`source ~/.bashrc`
 
 
 ## Restart your computer
 () Save and close and restart your computer. \
 () Once the windows machine is up and running restart docker and check the settings listed above \
-Everything else will be done again with Unbuntu 
+All remaining steps will be done inside of WSL with bash 
 
 ---
 
-# Ubuntu configuration 
+# WSL with Bash and Ubuntu configuration 
 
 ## Install Docker for Ubuntu virtual box 
 [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
@@ -157,15 +157,8 @@ sudo apt-get install ca-certificates
 sudo apt-get install curl
 sudo apt-get install gnupg-agent
 sudo apt-get install software-properties-common
-```
-```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-```
-
-```
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-```
-```
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
@@ -175,8 +168,14 @@ Verify that Docker Engine is installed correctly by running the  `hello-world`  
  docker run hello-world
 ```
 
+## Install ddev
+`curl -L https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev.sh | bash`
+`docker network create --driver nat`
+`docker network create --driver nat ddev_default`
+
+
 ## Create your ssh keys 
-Open your wsl terminal as admin  with bash and create an ssh key. \
+Open your wsl terminal as admin with bash and create an ssh key. \
 `bash` \
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` \
 () cd to your ssh file \
@@ -187,6 +186,7 @@ Open your wsl terminal as admin  with bash and create an ssh key. \
 ... () Go to https://github.com/settings/keys and add a new ssh key \
 ....() save the key on github \
 ....() in your wsl terminal type in `ssh-agent -s id_rsa`
+
 
 ## Install a text editor Sublime or equivalent 
 https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe
