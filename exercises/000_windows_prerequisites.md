@@ -158,12 +158,12 @@ Open your wsl terminal as admin with bash and create an ssh key. \
 ....() save the key on github \
 ....() in your wsl terminal type in `ssh-agent -s id_rsa`
 
-() Configuring Git
+## Configuring Git
 Before working with an Acquia BLT project, you must identify yourself to Git by running the following commands:\
 `git config --global user.email "you@example.com"` \
 `git config --global user.name "Your Name"` 
 
-() BLT  
+## BLT  
 Manually add this BLT function inide of WSL with bash to .bashrc file \
 `nano  ~\.bashrc`
 
@@ -185,6 +185,7 @@ function blt() {
 }
 ```
 `source ~/.bashrc`
+
 
 ## Install a text editor Sublime or equivalent 
 https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe
