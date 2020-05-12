@@ -115,8 +115,10 @@ Before working with an Acquia BLT project, you must identify yourself to Git by 
 
 ()BLT  
 Manually add this BLT function inide of WSL with bash to .bashrc file \
-`nano  ~\.bashrc` \ 
+`nano  ~\.bashrc`
+
 add this function
+
 ```
 function blt() {
   if [ "'git rev-parse --show-cdup 2> /dev/null'" != "" ]; then
